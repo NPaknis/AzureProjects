@@ -5,3 +5,22 @@ I have practiced this lab once before in 2024, although Josh updated the lab wit
 
 I already have an Azure subscription, and the free trial period ran out about a year ago, so we will be starting with a pay-as-you-go subscription. 
 I will cover the costs for the (few) minutes my virtual machine is running. This should be a few pennies or a few dollars, depending on the how long the lab runs. 
+
+
+To start, we create a resource group, a virtual network, and a virtual machine seperately in the Azure portal
+The resource group will host all of the resources in the lab. This will allow us to delete everything at once, as to not incur further expenses
+
+For the VNET, all default options were left in place
+
+The virtual machine I debated from using a D2S V3 machine, or a B1S to lower cost variables
+In the previous iteration of this lab, I had only spent a few pennies running the VM for a few minutes while attackers tried to gain access to it
+
+Josh uses a D2S V3 machine, which may help to prevent the machine from crashing when attackers are brute-forcing it
+I am not sure if B1S could handle that, so I selected D2S V3 as well
+
+Here are my VM details:
+Name - CORP-PASSWORD-DATABASE
+Region - US East 2
+No infrastructure redundancy required
+Image - Windows 10 Pro
+Size - D2S V3
